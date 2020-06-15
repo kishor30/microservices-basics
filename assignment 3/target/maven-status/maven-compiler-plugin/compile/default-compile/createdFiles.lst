@@ -1,0 +1,5 @@
+com\uxpsystems\assignment\dao\UserProfileRepository.class
+com\uxpsystems\assignment\config\SpringBootAssigmentApplication.class
+com\uxpsystems\assignment\controller\UserProfileController.class
+com\uxpsystems\assignment\model\UserProfile.class
+com\uxpsystems\assignment\service\UserProfileService.class

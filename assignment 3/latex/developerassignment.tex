@@ -1,0 +1,74 @@
+\documentclass[12pt, onecolumn]{article}
+\usepackage[parfill]{parskip}
+\usepackage[none]{hyphenat}
+\usepackage{listings}
+\usepackage{graphicx} 
+\makeatletter
+\setlength{\@fptop}{0pt}
+\makeatother
+
+\begin{document}
+\vspace*{-75px}
+\makebox[\textwidth]{{\includegraphics{uxplogo.png}}}
+%\noindent\makebox[\textwidth]{\includegraphics[width=\paperwidth]{uxpheader.png}}
+\begingroup  
+\centering
+\LARGE UXP Systems Java Developer Assignment\\[1.5em]
+\endgroup
+\section{Introduction}
+The task is to create a simple web application that will make use of the frameworks and technologies found at UXP Systems.
+
+\section{Features}
+\subsection{Required}
+\begin{enumerate}
+\item Create a \textbf{Maven} project to implement a simple \textbf{Spring} based \textbf{web application} with a controller exposing the following 4 APIs:
+\begin{itemize}
+	\item GET  /user
+	\item POST /user
+	\item PUT /user
+	\item DELETE /user
+\end{itemize}
+\item These APIs will perform CRUD operations using \textbf{Hibernate} as a persistence framework on a User entity with at minimum the following fields:
+\begin{itemize}
+	\item id (long) / primary key
+	\item username (String) / unique
+	\item status (String)  / possible values: Activated/Deactivated
+\end{itemize}
+\item Secure these APIs with \textbf{Spring Security} using BASIC authentication
+\item Provide \textbf{unit tests} for controllers, services and DAO classes
+\item Host the project in a local \textbf{GIT} repository 
+\end{enumerate}
+\subsection{Optional}
+\begin{enumerate}
+\item Configure Hibernate to use Hazelcast as a second level cache
+\item Secure service layer methods
+\end{enumerate}
+\section{Provided Materials}
+The attached assignment.zip provides a basic directory layout and POM file to help get you started.
+\section{Guidelines}
+\begin{itemize}
+	\item You can use any IDE of your choice (IntelliJ, Eclipse, Netbeans, \ldots)
+	\item You are free to choose between Spring Annotation or XML configuration
+	\item You are free to choose between Hibernate Annotation or XML configuration
+	\item For simplicity, use an in-memory DB like (HSQLDB or H2)
+	\item Also for simplicity, use jetty web server
+	\item Please follow the provided project structure
+	\item The submitted project will be evaluated for implementation completeness, code quality and documentation
+	\item Be prepared to discuss any part of the application during the in-person interview
+\end{itemize}
+\section{Deliverable Results}
+\begin{enumerate}
+	\item Edit the README.md file in the root directory with documentation of any important configurations, references or design concerns
+	\item A zip file of the project containing the source code and .git folder (local GIT repo), without build artifacts or compiled classes
+	\item The project should be easily locally executable without any extra configuration with the following commands:
+	\begin{lstlisting}
+	mvn clean install
+	mvn jetty:run
+	\end{lstlisting}
+	\item The application should be accessible in the browser at this url: 
+	\begin{lstlisting}
+	http://localhost:9090/assignment
+	\end{lstlisting}
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,8 @@
+  DROP TABLE IF EXISTS users;
+  
+CREATE TABLE users(
+ id BIGINT PRIMARY KEY,
+  username VARCHAR(250) NOT NULL,
+ password VARCHAR(250) NOT NULL,
+UNIQUE KEY username_UNIQUE (username )
+);
